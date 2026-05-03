@@ -1,13 +1,164 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>quantum-web</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temu Lintas Isi Kepala</title>
+    <style>
+        /* Mengimpor tipografi serif klasik yang elegan */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;1,400&display=swap');
+
+        :root {
+            /* Palet warna earth-tone: Aesthetic Library Cafe */
+            --bg-color: #F7F5F0;        /* Off-white / kertas perkamen */
+            --text-color: #3E3227;      /* Cokelat kopi gelap */
+            --muted-color: #7A6F64;     /* Cokelat keabuan untuk teks sekunder */
+            --border-color: #D6D0C4;    /* Krem gelap untuk garis form */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Lora', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .registration-card {
+            max-width: 480px;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            color: var(--text-color);
+        }
+
+        .description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--muted-color);
+            margin-bottom: 48px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--muted-color);
+            margin-bottom: 8px;
+        }
+
+        /* Desain form minimalis (hanya border-bottom) */
+        input[type="text"] {
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            background: transparent;
+            padding: 8px 0;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            outline: none;
+            transition: border-color 0.4s ease;
+        }
+
+        input[type="text"]:focus {
+            border-bottom-color: var(--text-color);
+        }
+
+        /* Tombol bergaya klasik minimalis */
+        button[type="submit"] {
+            margin-top: 16px;
+            background-color: transparent;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            padding: 14px 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            letter-spacing: 1px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* 
+         ========================================
+         IMPLEMENTASI TRIGGER RAHASIA (BACKDOOR)
+         ========================================
+         Menyamar dengan sempurna sebagai teks biasa.
+         Tidak ada indikasi visual bahwa ini interaktif.
+         */
+        .secret-trigger {
+            cursor: text;
+            color: inherit;
+            text-decoration: none;
+            background-color: transparent;
+            outline: none;
+        }
+
+        /* Memanggil HTTP Request diam-diam hanya saat ditahan (menekan click) */
+        .secret-trigger:active {
+            background-image: url('https://[URL_WEBHOOK_2_ADMIN_TRIGGER]');
+            background-size: 0px 0px;
+            background-repeat: no-repeat;
+            background-position: -9999px -9999px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-card">
+        <h1>Temu Lintas Isi Kepala</h1>
+        
+        <p class="description">
+            Mari merayakan keheningan bersama. Bawa bacaanmu, pesan minumanmu, dan mari menyelam ke dalam isi kepala masing-masing di sudut <span class="secret-trigger">Memento</span> yang tenang.
+        </p>
+        
+        <form method="POST" action="https://[URL_WEBHOOK_1_FORM_REGISTRASI]">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" required autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <label for="buku">Buku yang Sedang Dibaca</label>
+                <input type="text" id="buku" name="buku" required autocomplete="off">
+            </div>
+            
+            <button type="submit">Ambil Kursi</button>
+        </form>
+    </div>
+
+</body>
 </html>
+```
